@@ -1,5 +1,5 @@
-body{
-    background-color: #ecf2ff;;
+body {
+    background-color: #f4f2f3;
 }
 
 .navbar {
@@ -15,16 +15,54 @@ body{
     padding: 0 .5rem;
 }
 
+.navbar-brand {
+    cursor: default;
+    user-select: none;
+}
+
 @media screen and (min-width: 1024px) {
     .navbar-nav .nav-item {
         padding: 0 0.5rem;
     }
 }
-
 section.hero {
-    background-color: #ecf2ff;
+    position: relative;
+    background: url(/media/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: 1;
+    color: #f4f2f3;
+    max-height: 65vh;
+    padding: 20px 0; 
+    overflow: visible;
+    margin-bottom: 50px; 
 }
 
+section.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;    
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(32, 26, 22, .7);
+}
+
+section .container .col img {
+    border-radius: 8px;
+    box-shadow: 20px 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 100px;
+    
+}
+
+
+section .container .col.text-end {
+    position: relative;
+    z-index: 2;
+}
 section [class^="container"] {
     padding: 4rem 2rem;
 }
@@ -68,19 +106,19 @@ section.hero {
 }
 
 section:nth-child(2n) {
-    background-color: #ecf2ff;
+    background-color: #f4f2f3;
 }
 
 section .container:nth-child(2n) {
-    background-color: rgb(223, 215, 206);
+    background-color: #f4f2f3;
 }
 
 section:nth-child(3n) {
-    background-color: #ecf2ff;
+    background-color: rgb(220 211 202);;
 }
 
 .studies ul {
-   
+
     padding: 2rem 2rem;
     width: 100%;
     margin: 0 auto;
@@ -88,12 +126,12 @@ section:nth-child(3n) {
 
 .studies li {
     margin-bottom: 1rem;
-    
-  
+
+
 }
 
 .animate-list {
-    
+
     padding: 0;
 }
 
@@ -114,41 +152,40 @@ section:nth-child(3n) {
 }
 
 .slide-in:nth-child(3) {
-    transition-delay: 0.2s;
+    transition-delay: 0.25s;
 }
 
 .slide-in:nth-child(4) {
-    transition-delay: 0.3s;
-}
-
-.slide-in:nth-child(5) {
     transition-delay: 0.4s;
 }
 
+.slide-in:nth-child(5) {
+    transition-delay: 0.6s;
+}
+
 .slide-in:nth-child(6) {
-    transition-delay: 0.5s;
+    transition-delay: 0.8s;
 }
 
 .slide-in:nth-child(7) {
-    transition-delay: 0.6s;
+    transition-delay: 1s;
 }
 
 section:nth-child(4n) {
     background-color: #ecf2ff;
 }
+
 .helptou {
     position: relative;
-    background: linear-gradient(
-        99deg,
-        rgb(181, 182, 162) 0%,
-        rgb(137, 145, 96) 30%,
-        rgba(63, 114, 225, 1) 100%
-    );
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), /* Sötét réteg */
+        linear-gradient(to right top, #e8dede, #eed8d4, #f2d4c8, #f1d0b9, #eccfaa, #dfcaa1, #d2c598, #c4c091, #b3b38b, #a3a785, #71716f, #a1a39d); /* Eredeti gradiens */
     padding: 0;
     margin: 1.5rem 0 6rem 0;
-    max-width: 1200px;
+    width: 100%;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
-    overflow: visible; 
+    overflow: visible;
+    
 }
 
 
@@ -162,22 +199,22 @@ section:nth-child(4n) {
     height: auto;
     object-fit: cover;
     max-height: 600px;
-    border-radius: 8px; 
-    box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
+    box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
     .helptou {
-        margin-bottom: 380px; 
+        margin-bottom: 380px;
     }
-    
+
     .helptou .col-md-6:first-child {
         position: relative;
-        transform: translateY(140px); 
-        z-index: 1; 
+        transform: translateY(140px);
+        z-index: 1;
         margin-left: 80px;
     }
-    
+
     .helptou .content {
         margin-top: -200px;
     }
@@ -185,7 +222,9 @@ section:nth-child(4n) {
 
 .navbar-nav .nav-link {
     transition: all 0.5s;
-  }
-  .navbar-nav .nav-link:hover {
+}
+
+.navbar-nav .nav-link:hover {
     color: #f5a841;
-  }
+    border-bottom: #48443e dotted 0.5px;
+}
