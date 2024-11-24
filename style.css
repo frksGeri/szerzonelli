@@ -1,5 +1,12 @@
+
+
 body {
     background-color: #f4f2f3;
+}
+
+small{
+    color: red;
+    font-size: 1.1em;
 }
 
 .navbar {
@@ -25,25 +32,26 @@ body {
         padding: 0 0.5rem;
     }
 }
+
 section.hero {
     position: relative;
-    background: url(/media/banner.jpg);
+    background: url(/bootstrap/media/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
     z-index: 1;
     color: #f4f2f3;
     max-height: 65vh;
-    padding: 20px 0; 
+    padding: 20px 0;
     overflow: visible;
-    margin-bottom: 50px; 
+    margin-bottom: 50px;
 }
 
 section.hero::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;    
+    left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -55,7 +63,7 @@ section .container .col img {
     box-shadow: 20px 5px 15px rgba(0, 0, 0, 0.2);
     position: relative;
     top: 100px;
-    
+
 }
 
 
@@ -63,6 +71,7 @@ section .container .col.text-end {
     position: relative;
     z-index: 2;
 }
+
 section [class^="container"] {
     padding: 4rem 2rem;
 }
@@ -114,7 +123,8 @@ section .container:nth-child(2n) {
 }
 
 section:nth-child(3n) {
-    background-color: rgb(220 211 202);;
+    background-color: rgb(220 211 202);
+    ;
 }
 
 .studies ul {
@@ -177,15 +187,17 @@ section:nth-child(4n) {
 
 .helptou {
     position: relative;
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), /* Sötét réteg */
-        linear-gradient(to right top, #e8dede, #eed8d4, #f2d4c8, #f1d0b9, #eccfaa, #dfcaa1, #d2c598, #c4c091, #b3b38b, #a3a785, #71716f, #a1a39d); /* Eredeti gradiens */
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        /* Sötét réteg */
+        linear-gradient(to right top, #e8dede, #eed8d4, #f2d4c8, #f1d0b9, #eccfaa, #dfcaa1, #d2c598, #c4c091, #b3b38b, #a3a785, #71716f, #a1a39d);
+    /* Eredeti gradiens */
     padding: 0;
     margin: 1.5rem 0 6rem 0;
     width: 100%;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
     overflow: visible;
-    
+
 }
 
 
@@ -227,4 +239,27 @@ section:nth-child(4n) {
 .navbar-nav .nav-link:hover {
     color: #f5a841;
     border-bottom: #48443e dotted 0.5px;
+}
+
+footer {
+    border-top: dotted 1px black;
+    width: 80%;
+    margin: 0 auto;
+}
+
+footer>.container>h2 {
+    text-transform: uppercase;
+}
+
+.footer-bord {
+    max-width: 1024px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 20%);
+    padding: 2em;
+}
+
+.myself{
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
 }
