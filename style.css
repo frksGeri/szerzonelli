@@ -40,7 +40,7 @@ i{
 /* Hero section reszponzív stílusok */
 .hero {
     position: relative;
-    background: url(../bootstrap/media/banner.jpg);
+    background: url(media/banner.jpg);
     background-size: cover;
     background-position: bottom;
     min-height: 60vh;
@@ -138,7 +138,7 @@ i{
 
 section:nth-child(4n) {
     background-color: #f4f2f3;
-    background-image: url(../bootstrap/media/bg.png);
+    background-image: url(media/bg.png);
     background-size: cover;
     background-size: contain;
     background-repeat: no-repeat;
