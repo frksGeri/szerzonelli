@@ -2,9 +2,9 @@
 
 html,body {
     background-color: #f4f2f3;
-    position: relative;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow-x: clip;
+    min-width: 320px;
+   
 }
 small{
     color:  red;
@@ -17,6 +17,7 @@ i{
 .navbar {
     background-color: #ffffff;
     padding: 1rem;
+
 }
 
 .navbar-nav .nav-link {
@@ -69,6 +70,8 @@ i{
 }
 
 .hero-img {
+    width: 100%;
+    height: auto;
     max-width: 70%;
     margin-top: 2rem;
     position: relative;
@@ -144,8 +147,7 @@ section:nth-child(4n) {
     background-size: cover;
     background-size: contain;
     background-repeat: no-repeat;
-    
-    background-position: 0 0, 20px 20px;
+    width: 100%;
 }
 
 .slide-in-right {
@@ -206,7 +208,7 @@ footer .container>h2 {
     margin: 0 auto;
     background: white;
     box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 20%);
-    padding: 2em;
+    padding: 2em 0;
 }
 
 .footerdata{
@@ -246,6 +248,13 @@ footer .container>h2 {
     
     .helptou {
         padding: 2rem 0;
+    }
+    .spacer {
+        display: none;
+    }
+
+    .pt-5 {
+        padding-top: 2rem; /* kisebb margó mobilra */
     }
 }
 
