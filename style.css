@@ -1,11 +1,13 @@
 /* Alap stílusok */
+
 html,body {
     background-color: #f4f2f3;
     position: relative;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 small{
-    color: red;
+    color:  red;
     font-size: 1.1em;
 }
 i{
