@@ -1,131 +1,86 @@
-
-
-body {
+/* Alap stílusok */
+html,body {
     background-color: #f4f2f3;
+    position: relative;
+    overflow-x: hidden;
 }
-
 small{
     color: red;
     font-size: 1.1em;
 }
-
+i{
+    font-size: 25px;
+}
+/* Navbar reszponzív stílusok */
 .navbar {
     background-color: #ffffff;
+    padding: 1rem;
 }
 
 .navbar-nav .nav-link {
     color: #000000;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+
 }
 
-.navbar-nav .nav-item {
-    padding: 0 .5rem;
+
+.navbar-nav .nav-link {
+    transition: all 0.5s;
 }
 
-.navbar-brand {
-    cursor: default;
-    user-select: none;
+.navbar-nav .nav-link:hover {
+    color: #f5a841;
+    border-bottom: #48443e dotted 0.5px;
 }
 
-@media screen and (min-width: 1024px) {
-    .navbar-nav .nav-item {
-        padding: 0 0.5rem;
-    }
-}
 
-section.hero {
+
+/* Hero section reszponzív stílusok */
+.hero {
     position: relative;
-    background: url(/bootstrap/media/banner.jpg);
+    background: url(../bootstrap/media/banner.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: bottom;
-    z-index: 1;
-    color: #f4f2f3;
-    max-height: 65vh;
-    padding: 20px 0;
-    overflow: visible;
-    margin-bottom: 50px;
+    min-height: 60vh;
+    padding: 6rem 0 3rem;
+    margin-bottom: 5.5rem;
+    
 }
 
-section.hero::before {
+.hero::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     background-color: rgba(32, 26, 22, .7);
+    z-index: 1;
 }
 
-section .container .col img {
-    border-radius: 8px;
-    box-shadow: 20px 5px 15px rgba(0, 0, 0, 0.2);
-    position: relative;
-    top: 100px;
-
-}
-
-
-section .container .col.text-end {
+.hero .container {
     position: relative;
     z-index: 2;
+    color: #f4f2f3;
 }
 
-section [class^="container"] {
-    padding: 4rem 2rem;
+.hero-img {
+    max-width: 70%;
+    margin-top: 2rem;
+    position: relative;
+    top: 120px;
 }
 
-@media screen and (min-width: 1024px) {
-    section [class^="container"] {
-        padding: 4rem;
-    }
-
-    nav [class^="container"] {
-        padding: 0 4rem;
-    }
+/* About section reszponzív stílusok */
+.about img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 1024px) {
-    .navbar-brand {
-        font-size: 1.5rem;
-    }
-}
-
-section.hero {
-    padding-top: 72px;
-}
-
-@media screen and (max-width: 576px) {
-    section.hero {
-        text-align: center;
-    }
-
-    section.hero .img-fluid {
-        width: 80%;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-
-    section.about .container,
-    section.studies .container {
-        width: 75%;
-    }
-}
-
-section:nth-child(2n) {
-    background-color: #f4f2f3;
-}
-
-section .container:nth-child(2n) {
-    background-color: #f4f2f3;
-}
-
-section:nth-child(3n) {
-    background-color: rgb(220 211 202);
-    ;
-}
+/* Studies section reszponzív stílusok */
 
 .studies ul {
 
@@ -182,72 +137,65 @@ section:nth-child(3n) {
 }
 
 section:nth-child(4n) {
-    background-color: #ecf2ff;
+    background-color: #f4f2f3;
+    background-image: url(../bootstrap/media/bg.png);
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    background-position: 0 0, 20px 20px;
 }
 
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+/* Delayed animation for help section list items */
+.slide-in-right:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.slide-in-right:nth-child(2) {
+    transition-delay: 0.25s;
+}
+
+.slide-in-right:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.slide-in-right:nth-child(4) {
+    transition-delay: 0.6s;
+}
+/* Help section reszponzív stílusok */
 .helptou {
-    position: relative;
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        /* Sötét réteg */
-        linear-gradient(to right top, #e8dede, #eed8d4, #f2d4c8, #f1d0b9, #eccfaa, #dfcaa1, #d2c598, #c4c091, #b3b38b, #a3a785, #71716f, #a1a39d);
-    /* Eredeti gradiens */
-    padding: 0;
-    margin: 1.5rem 0 6rem 0;
-    width: 100%;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
-    overflow: visible;
-
-}
-
-
-.helptou .col-md-6:first-child {
-    position: relative;
-    margin-bottom: -100px;
+    
+    padding: 4rem 0;
+    margin: 3rem 0;
 }
 
 .helptou img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    max-height: 600px;
     border-radius: 8px;
-    box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
-    .helptou {
-        margin-bottom: 380px;
-    }
-
-    .helptou .col-md-6:first-child {
-        position: relative;
-        transform: translateY(140px);
-        z-index: 1;
-        margin-left: 80px;
-    }
-
-    .helptou .content {
-        margin-top: -200px;
-    }
-}
-
-.navbar-nav .nav-link {
-    transition: all 0.5s;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #f5a841;
-    border-bottom: #48443e dotted 0.5px;
-}
-
+/* Footer reszponzív stílusok */
 footer {
-    border-top: dotted 1px black;
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;   
+    bottom: 20px;
+    margin-top: auto;
+
 }
 
-footer>.container>h2 {
+footer .container>h2 {
     text-transform: uppercase;
 }
 
@@ -259,7 +207,56 @@ footer>.container>h2 {
     padding: 2em;
 }
 
-.myself{
-    text-decoration-line: underline;
-    text-decoration-style: dotted;
+.footerdata{
+    background-color: #8e8381;
+    padding: 2rem 0;
+    margin: 2rem 0;
+    height: auto;
+    width: 100%;
+    position: absolute;
+}
+
+.footerdata p:nth-child(1){
+    line-height: 3rem;
+}
+.fs6{
+    font-size: 0.8rem;
+}
+/* Media queries */
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+        padding-top: 5rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-img {
+        margin: 2rem auto;
+    }
+    
+    .about h2,
+    .studies h2 {
+        text-align: center;
+    }
+    
+    .helptou {
+        padding: 2rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .footer-bord {
+        padding: 1.5rem;
+    }
 }
