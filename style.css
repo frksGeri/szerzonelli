@@ -2,7 +2,7 @@
 
 html,body {
     background-color: #f4f2f3;
-  
+  width: 100%;
     min-width: 320px;
    
 }
@@ -215,7 +215,6 @@ footer .container>h2 {
     background-color: #8e8381;
     padding: 2rem 0;
     margin: 2rem 0;
-    height: auto;
     width: 100%;
     position: absolute;
 }
