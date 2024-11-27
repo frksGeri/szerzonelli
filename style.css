@@ -2,8 +2,8 @@
 
 html,body {
     background-color: #f4f2f3;
-  width: 100%;
-    min-width: 320px;
+    max-width: 100%;
+    overflow-x: clip;
    
 }
 small{
@@ -70,7 +70,6 @@ i{
 }
 
 .hero-img {
-    width: 100%;
     height: auto;
     max-width: 70%;
     margin-top: 2rem;
@@ -238,6 +237,7 @@ footer .container>h2 {
     
     .hero-img {
         margin: 2rem auto;
+
     }
     
     .about h2,
