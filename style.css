@@ -286,6 +286,6 @@ footer .container>h2 {
 }
 @media (min-width: 992px) {
     .parallax .parallax_child {
-        background-attachment: fixed;  /* Csak asztali nézetben legyen fixed */
+        background-attachment: scroll;  /* Csak asztali nézetben legyen fixed */
     }
 }
