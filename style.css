@@ -86,7 +86,7 @@ i{
 
 .parallax .parallax_child{
     background-image: url(media/bg.png); 
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -282,5 +282,10 @@ footer .container>h2 {
     
     .footer-bord {
         padding: 1.5rem;
+    }
+}
+@media (min-width: 992px) {
+    .parallax .parallax_child {
+        background-attachment: fixed;  /* Csak asztali nézetben legyen fixed */
     }
 }
