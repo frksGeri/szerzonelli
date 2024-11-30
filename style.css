@@ -77,6 +77,24 @@ i{
     top: 120px;
 }
 
+.parallax{
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+}
+
+
+.parallax .parallax_child{
+    background-image: url(media/bg.png); 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
 /* About section reszponzív stílusok */
 .about img {
     max-width: 100%;
@@ -142,11 +160,7 @@ i{
 
 section:nth-child(4n) {
     background-color: #f4f2f3;
-    background-image: url(media/bg.png);
-    background-size: cover;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
+   
 }
 
 .slide-in-right {
